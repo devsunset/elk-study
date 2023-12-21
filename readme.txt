@@ -1,6 +1,6 @@
 -------------------------------------------------
 
-			# ELK-WORK #
+			# ELK-STUDY #
 
 -------------------------------------------------
 
@@ -53,9 +53,9 @@ https://soyoung-new-challenge.tistory.com/56
 https://kimseunghyun76.tistory.com/category/DB%26NoSQL/Elasticsearch%2CELK
 
 
--Pre-work
+-Pre-step
 	node instll
-	java instll or set JAVA_HOME=C:\dev\elk-work\elasticsearch-7.8.0\jdk
+	java instll or set JAVA_HOME=C:\dev\elk-study\elasticsearch-7.8.0\jdk
 	
 -Download
 	https://www.elastic.co/kr/downloads/elasticsearch
@@ -65,15 +65,15 @@ https://kimseunghyun76.tistory.com/category/DB%26NoSQL/Elasticsearch%2CELK
 	https://www.elastic.co/kr/downloads/kibana
 
 -Install 
- Install Path : C:\dev\elk-work 
-	C:\dev\elk-work\elasticsearch-7.8.0
-	C:\dev\elk-work\logstash-7.8.0		
-	C:\dev\elk-work\filebeat-7.8.0	
-	C:\dev\elk-work\kibana-7.8.0
+ Install Path : C:\dev\elk-study 
+	C:\dev\elk-study\elasticsearch-7.8.0
+	C:\dev\elk-study\logstash-7.8.0		
+	C:\dev\elk-study\filebeat-7.8.0	
+	C:\dev\elk-study\kibana-7.8.0
 
 -Run  
 -elasticsearch (default jvm elasticsearch-7.8.0\jdk) 		
-	cmd  : C:\dev\elk-work\elasticsearch-7.8.0\bin\elasticsearch.bat
+	cmd  : C:\dev\elk-study\elasticsearch-7.8.0\bin\elasticsearch.bat
 	
 	http://localhost:9200/	
 	
@@ -81,18 +81,18 @@ https://kimseunghyun76.tistory.com/category/DB%26NoSQL/Elasticsearch%2CELK
 	 http://localhost:9200/_cat/indices?v&pretty	
 
 -logstash
-	cmd  : set JAVA_HOME=C:\dev\elk-work\elasticsearch-7.8.0\jdk
-		   C:\dev\elk-work\logstash-7.8.0\bin\logstash.bat -f C:\dev\elk-work\logstash-7.8.0\config\logstash.conf
+	cmd  : set JAVA_HOME=C:\dev\elk-study\elasticsearch-7.8.0\jdk
+		   C:\dev\elk-study\logstash-7.8.0\bin\logstash.bat -f C:\dev\elk-study\logstash-7.8.0\config\logstash.conf
 	
 	*plugin update (init install)
-		C:\dev\elk-work\logstash-7.8.0\bin\logstash-plugin update logstash-input-beats
-		C:\dev\elk-work\logstash-7.8.0\bin\logstash-plugin update logstash-filter-useragent
-		C:\dev\elk-work\logstash-7.8.0\bin\logstash-plugin update logstash-filter-geoip
+		C:\dev\elk-study\logstash-7.8.0\bin\logstash-plugin update logstash-input-beats
+		C:\dev\elk-study\logstash-7.8.0\bin\logstash-plugin update logstash-filter-useragent
+		C:\dev\elk-study\logstash-7.8.0\bin\logstash-plugin update logstash-filter-geoip
 				
 	*modify - logstash.conf 
 		
 -filebeat
-	cmd  : C:\dev\elk-work\filebeat-7.8.0\filebeat.exe -c C:\dev\elk-work\filebeat-7.8.0\filebeat.yml -e -v
+	cmd  : C:\dev\elk-study\filebeat-7.8.0\filebeat.exe -c C:\dev\elk-study\filebeat-7.8.0\filebeat.yml -e -v
 	
 	*modify - filebeat.yml
 				  			  				
@@ -103,7 +103,7 @@ https://kimseunghyun76.tistory.com/category/DB%26NoSQL/Elasticsearch%2CELK
 		10.121.123.104 - - [01/Nov/2012:21:01:18 +0100] "GET /cpc/auth.do?loginsetup=true&targetPage=%25252Fcpc%25252F&loginsetup=true HTTP/1.1" 302 494
 	 
 -kibana
-	cmd  : C:\dev\elk-work\kibana-7.8.0\bin\kibana.bat
+	cmd  : C:\dev\elk-study\kibana-7.8.0\bin\kibana.bat
 	
 	http://127.0.0.1:5601/
 
